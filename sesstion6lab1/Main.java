@@ -1,7 +1,5 @@
 package session6lab1;
 
-import sesstion6lab1.StudentList;
-
 import java.util.Scanner;
 
 public class Main {
@@ -16,7 +14,7 @@ public class Main {
             System.out.println("2. Edit student by ID");
             System.out.println("3. Delete student by ID");
             System.out.println("4. Sort students by GPA");
-            System.out.println("5. Sort students by name");
+            System.out.println("5. Sort  students by name");
             System.out.println("6. Show student list");
             do {
                 x = sc.nextInt();
@@ -27,8 +25,14 @@ public class Main {
                     break;
                 }
                 case 2: {
-                    stl.editStudent();
-                    break;
+                    try{
+                        stl.editStudent();
+                        break;
+                    }
+                    catch(Exception e){
+                        System.out.println("Bug rồi nhập lại đi");
+                        break;
+                    }
                 }
                 case 3: {
                     stl.deleteStudent();
