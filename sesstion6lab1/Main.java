@@ -21,8 +21,14 @@ public class Main {
             } while (x<0 || x>6);
             switch (x) {
                 case 1: {
+                    try{
                     stl.addStudent();
                     break;
+                }
+                catch (Exception e){
+                        System.out.println("Bug rồi nhập lại đi");
+                        return;
+                }
                 }
                 case 2: {
                     try{
